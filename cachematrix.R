@@ -1,7 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## makeCacheMatrix will store and cache the matrix
+## cacheSolve return the inverse of a matrix
 
-## Write a short comment describing this function
+## makeCacheMatrix create a list containg a function to
+##      1. set the value of the vector
+##      2. get the value of the vector
+##      3. set the value of thte mean
+##      4. get the value of the mean
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,10 +22,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve wil return the cached inverse of a matrix; the function
+## compute to look for the inverse if it is not been cached
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  ## Return a matrix that is the inverse of 'x'
   m <- x$getInverse()
   if(!is.null(m)) {
     message("getting cached data")
